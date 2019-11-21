@@ -1,6 +1,7 @@
+/** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 import Form from "./Form";
-/** @jsx jsx */
+
 import Logo from "../images/GiantRobotLTD_Logo.svg";
 import "../styles/App.css";
 
@@ -38,7 +39,7 @@ const imageStyle = css`
 `;
 
 const formStyle = css`
-  margin: 12px auto;
+  margin: 32px auto;
   margin-left: 10%;
   margin-right: auto;
 `;

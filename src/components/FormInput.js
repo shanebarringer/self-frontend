@@ -1,7 +1,14 @@
 /** @jsx jsx */
 import { css, jsx } from "@emotion/core";
 
-const FormInput = ({ val, submit, labelText, name, handleFormUpdate }) => {
+const FormInput = ({
+  val,
+  submit,
+  labelText,
+  name,
+  formBase,
+  handleFormUpdate
+}) => {
   const err = submit && !val.length;
 
   return (
@@ -14,7 +21,7 @@ const FormInput = ({ val, submit, labelText, name, handleFormUpdate }) => {
         type="text"
         name={name}
         value={val}
-        css={[inputBase, err ? error : ""]}
+        css={[formBase, inputBase, err ? error : ""]}
         style={{ background: val.length ? "#fff" : "" }}
         onChange={handleFormUpdate}
       />
@@ -31,13 +38,7 @@ const colors = {
 
 const inputBase = css`
   background-color: ${colors.idle};
-  font: 14px Roboto;
   color: ${colors.label};
-  margin: 12px auto;
-  padding-left: 16px;
-  width: 80%;
-  height: 48px;
-  border-radius: 6px;
   border: 1px solid ${colors.idle};
   &:focus {
     outline: 0;
