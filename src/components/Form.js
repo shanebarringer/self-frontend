@@ -98,7 +98,7 @@ const Form = () => {
 
 const formBase = css`
   font: 14px Roboto;
-  margin: 12px;
+  margin: 12px auto;
   padding-left: 16px;
   width: 80%;
   height: 48px;
