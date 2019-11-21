@@ -1,12 +1,14 @@
+import { css, jsx } from "@emotion/core";
 import Form from "./Form";
 /** @jsx jsx */
-import { css, jsx } from "@emotion/core";
+import Logo from "../images/GiantRobotLTD_Logo.svg";
 import "../styles/App.css";
 
 function App() {
   return (
     <div className="App">
       <div css={welcome}>
+        <img css={imageStyle} src={Logo} alt="Giant Robot LTD logo" />
         <h1>Welcome</h1>
         <p>Please tell us a bit about yourself to get started</p>
       </div>
@@ -27,6 +29,12 @@ const welcome = css`
     font-weight: 700;
     font-family: Roboto, sans-serif;
   }
+`;
+
+const imageStyle = css`
+  margin: 32px auto;
+  height: 26px;
+  width: 177px;
 `;
 
 const formStyle = css`
