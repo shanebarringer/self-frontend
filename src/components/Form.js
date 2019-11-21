@@ -85,12 +85,17 @@ const formBase = css`
 
 const buttonStyle = css`
   background: #FFAB44;
+  margin-top: 48px;
   color: #fff;
   font-size 16px;
   font-weight: 700;
-  width: 85%;
   border: none;
   outline: none;
+   @media (min-width: 1200px) {
+    width: initial;
+    padding: 0 24px;
+    display: inline-block;
+  }
 `;
 
 export default Form;

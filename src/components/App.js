@@ -7,7 +7,7 @@ import "../styles/App.css";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <div css={welcome}>
         <img css={imageStyle} src={Logo} alt="Giant Robot LTD logo" />
         <h1>Welcome</h1>
@@ -20,6 +20,8 @@ function App() {
   );
 }
 
+const desktop = 1200;
+
 const welcome = css`
   background-color: #585858;
   font-size: 14px;
@@ -29,6 +31,12 @@ const welcome = css`
     font-size: 24px;
     font-weight: 700;
     font-family: Roboto, sans-serif;
+  }
+  @media (min-width: ${desktop}px) {
+    height: 100vh;
+    width: 58%;
+    display: inline-block;
+    float: left;
   }
 `;
 
@@ -42,6 +50,12 @@ const formStyle = css`
   margin: 32px auto;
   margin-left: 10%;
   margin-right: auto;
+  @media (min-width: ${desktop}px) {
+    width: 38%;
+    margin 114px auto;
+    padding: 24px;
+    display: inline-block;
+  }
 `;
 
 export default App;
